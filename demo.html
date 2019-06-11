@@ -26,13 +26,14 @@
     </nav>
 
     <main role="main">
-        <section id="demo">
+        <section id="demo-dash">
             <h2>My Tea Collection</h2>
             <div class="demo-element">
                 <h3>Darjeeling Delight</h3>
                 <img src="https://via.placeholder.com/40.png?text=black tea icon" alt="black tea icon" />
-                <p>Category: Black</p>
+                <p>Type: Black</p>
                 <p>Brand: Top Teas</p>
+                <p>Packaging: Loose Leaf</p>
                 <p>Notes: remeber not to oversteep this one!</p>
                 <button>Edit</button>
                 <button>Delete</button>
@@ -41,8 +42,9 @@
             <div class="demo-element">
                 <h3>Calming Chamomile</h3>
                 <img src="https://via.placeholder.com/40.png?text=herbal tea icon" alt="herbal tea icon" />
-                <p>Category: Herbal</p>
+                <p>Type: Herbal</p>
                 <p>Brand: Super Soothing Stuff</p>
+                <p>Packaging: Tea Bag</p>
                 <p>Notes: this one really helps me sleep, but is a bit expensive - keep an eye out for sales</p>
                 <button>Edit</button>
                 <button>Delete</button>
@@ -51,15 +53,78 @@
             <div class="demo-element">
                 <h3>Mega Matcha</h3>
                 <img src="https://via.placeholder.com/40.png?text=matcha tea icon" alt="matcha tea icon" />
-                <p>Category: Matcha</p>
+                <p>Type: Green</p>
                 <p>Brand: Imperial Imports</p>
+                <p>Packaging: Loose Leaf</p>
                 <p>Notes: only sold in Japan and takes forever to make, but so worth it!</p>
                 <button>Edit</button>
                 <button>Delete</button>
             </div>
 
+        </section>
 
-
+        <section class="anchor" id="demo-form">
+            <h2>Add a New Tea</h2>
+            <div class="demo-element">
+                <form class="add-form" id="add-form">
+                    <div class="form-section">
+                        <label for="name">What's your latest tea addition?</label>
+                        <input type="text" name="name" id="name" required />
+                    </div>
+                    <div class="form-section">
+                        <label for="type">Type (* = considered "true" tea, but Tea Rex loves all kinds!)</label>
+                        <select name="type" id="type">
+                            <option value="">-- choose one --</option>
+                            <optgroup label="BLACK">
+                                <option value="black">Black*</option>
+                                <option value="chai">Chai</option>
+                                <option value="blackflavored">Black Flavored</option>
+                            </optgroup>
+                            <optgroup label="GREEN">
+                                <option value="green">Green*</option>
+                                <option value="sencha">Sencha</option>
+                                <option value="matcha">Matcha</option>
+                                <option value="greenflavored">Green Flavored</option>
+                            </optgroup>
+                            <optgroup label="HERBAL">
+                                <option value="herbal">Herbal</option>
+                                <option value="mate">Mate</option>
+                                <option value="rooibos">Rooibos</option>
+                            </optgroup>
+                            <optgroup label="WHITE">
+                                <option value="white">White*</option>
+                            </optgroup>
+                            <optgroup label="OOLONG">
+                                <option value="oolong">Oolong*</option>
+                            </optgroup>
+                            <optgroup label="PU-ERH">
+                                <option value="puerh">Pu-erh*</option>
+                            </optgroup>
+                            <optgroup label="OTHER">
+                                <option value="blend">Blend</option>
+                                <option value="other">Other</option>
+                            </optgroup>
+                        </select>
+                        <div>
+                            <label for="brand">Brand/Company/Origin</label>
+                            <input type="text" name="brand" id="brand">
+                        </div>
+                        <div class="form-section">
+                            <label for="packaging">Packaging</label>
+                            <input type="radio" name="packaging" id="loose" value="Loose Leaf" checked="checked" />
+                            <label for="loose">Loose Leaf</label>
+                            <input type="radio" name="packaging" id="bag" value="Tea Bag" />
+                            <label for="bag">Tea Bag</label>
+                        </div>
+                        <div class="form-section">
+                            <label for="notes">Notes</label>
+                            <textarea name="notes" id="notes" rows="5"
+                                cols="50">Tasting notes, recipes, where to buy, health benefits, etc</textarea>
+                        </div>
+                        <button type="submit">Add Tea</button>
+                        <button type="reset">Reset</button>
+                </form>
+            </div>
         </section>
     </main>
     <footer role="content-info">(c)Anya Snow 2019</footer>

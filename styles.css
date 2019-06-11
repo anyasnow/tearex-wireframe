@@ -8,14 +8,6 @@
   }
 
 :root {
-	
-	--primarty-color-bkg: #2e2e3a;
-	--secondary-color-bkg: #8b2635;
-	--secondary-color-txt: #335c81;
-	--color-bkg: #616163;
-}
-
-:root {
   --bg-dark: #aaa; /* navsbg, footerbg, minor text */
   --bg-light:#ddd; /* contrast */
   --pic-bright: #059185; /* tea pics */
@@ -148,7 +140,7 @@ border: 2px solid var(--text-light)
 
 
 
-.signup-element, .signin-element, .demo-element, #signup, #signin, #demo  {
+.signup-element, .signin-element, .demo-element, #signup, #signin, #demo-dash, #demo-form  {
 	text-align: center;
 	margin: auto 20px;
 	padding: 10px;
@@ -169,6 +161,12 @@ button {
 
 }
 
+
+label {
+    display: inline-block;
+    margin-top: 20px;
+}
+
 footer {
     vertical-align: center;
     text-align: center
@@ -178,14 +176,7 @@ footer {
 
 @media (min-width: 481px) and (max-width: 1024px) {
 	
-	#header-img img {
-		opacity: 39%;
-		position: relative;
-
-		top: 65%;
-		left: 25%;
-	}
-	
+		
 	#description {
 		padding: 20px;
 		flex-wrap: wrap;
